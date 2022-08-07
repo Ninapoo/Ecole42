@@ -6,7 +6,7 @@
 /*   By: cwan-chu <cwan-chu@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 17:19:05 by cwan-chu          #+#    #+#             */
-/*   Updated: 2022/08/06 15:23:03 by cwan-chu         ###   ########.fr       */
+/*   Updated: 2022/08/07 19:00:01 by cwan-chu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ void	checker_is_success(t_frame *frame)
 		print_error();
 	else if (is_success(frame->ha) && frame->read_check >= 0
 		&& frame->stack_size == count_int(frame->ha))
+		write (0, "OK\n", 3);
+	else if (frame->stack_size == 1)
 		write (0, "OK\n", 3);
 	else
 		write (0, "KO\n", 3);

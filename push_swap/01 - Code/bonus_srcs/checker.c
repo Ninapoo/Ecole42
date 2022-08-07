@@ -6,7 +6,7 @@
 /*   By: cwan-chu <cwan-chu@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 16:55:21 by cwan-chu          #+#    #+#             */
-/*   Updated: 2022/08/07 17:14:46 by cwan-chu         ###   ########.fr       */
+/*   Updated: 2022/08/07 19:00:53 by cwan-chu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int	main(int argc, char *argv[])
 		}
 	}
 	frame->stack_size = count_int(frame->ha);
-	if (!is_success(frame->ha) && frame->ha)
+	if (!is_success(frame->ha) && frame->ha && frame->stack_size > 1)
 		run_instructions(frame);
 	checker_is_success(frame);
 	obliviate_frame(frame);
