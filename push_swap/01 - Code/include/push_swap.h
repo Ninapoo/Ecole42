@@ -24,14 +24,14 @@
 Bottom points to the t_node below in the stack
 Top points to the t_node above in the stack
 */
-typedef struct t_node
+typedef struct s_node
 {
 	int				num;
 	struct t_node	*bottom;
 	struct t_node	*top;
 }t_node;
 
-typedef struct t_frame
+typedef struct s_frame
 {
 	t_node	*ha;
 	t_node	*hb;
